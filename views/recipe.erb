@@ -5,7 +5,7 @@
 
       <div class="card-body">
         <h5 class="card-title"><%= recipe.title %></h5>
-        <p class="card-text"><%= recipe.description %></p>
+        <p class="card-text"><%= Markdown.parse(recipe.description) %></p>
       </div>
 
       <ul class="list-group list-group-flush">

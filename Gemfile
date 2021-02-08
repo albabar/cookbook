@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby File.read('.ruby-version').chomp
 
-gem 'sinatra'
-gem 'puma'
 gem 'contentful'
+gem 'kramdown'
+gem 'puma'
+gem 'sinatra'

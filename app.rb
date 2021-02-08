@@ -2,7 +2,8 @@
 # frozen_string_literal: true
 
 require 'sinatra'
-require_relative 'recipe'
+require_relative 'services/recipe'
+require_relative 'services/markdown'
 
 configure { set :server, :puma }
 
