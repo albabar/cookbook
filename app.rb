@@ -11,4 +11,9 @@ class Cookbook < Sinatra::Base
     recipes = Recipe.all
     erb :index, locals: { recipes: recipes }
   end
+
+  get '/recipe/:id' do
+    recipe = Recipe.find(params[:id])
+    erb :recipe, locals: { recipe: recipe }
+  end
 end

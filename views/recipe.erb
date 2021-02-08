@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <div class="card" style="width: 40vw">
+      <img src="<%= recipe.photo.url %>" alt="<%= recipe.title %>" style="height: 20vw" />
+
+      <div class="card-body">
+        <h5 class="card-title"><%= recipe.title %></h5>
+        <p class="card-text"><%= recipe.description %></p>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Calories: <%= recipe.calories %></li>
+        <% if recipe.fields[:tags] %>
+          <li class="list-group-item">Tags:
+            <% recipe.tags.each do |tag| %>
+              <span class="badge rounded-pill bg-info text-dark">#<%= tag.name %></span>
+            <% end %>
+          </li>
+        <% end %>
+        <% if recipe.fields[:chef] %>
+          <li class="list-group-item">Chef: <strong><%= recipe.chef.name %></strong></li>
+        <% end %>
+      </ul>
+
+      <div class="card-footer text-muted">
+        <small>Last modified: <%= recipe.updated_at %></small>
+      </div>
+    </div>
+
+  </div>
+</div>
