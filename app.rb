@@ -7,6 +7,6 @@ configure { set :server, :puma }
 
 class Cookbook < Sinatra::Base
   get '/' do
-    'Testing my Heart'
+    erb :index
   end
 end
