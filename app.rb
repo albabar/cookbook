@@ -2,11 +2,13 @@
 # frozen_string_literal: true
 
 require 'sinatra'
+require_relative 'recipe'
 
 configure { set :server, :puma }
 
 class Cookbook < Sinatra::Base
   get '/' do
-    erb :index
+    recipes = Recipe.all
+    erb :index, locals: { recipes: recipes }
   end
 end

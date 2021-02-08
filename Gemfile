@@ -6,3 +6,4 @@ ruby File.read('.ruby-version').chomp
 
 gem 'sinatra'
 gem 'puma'
+gem 'contentful'
